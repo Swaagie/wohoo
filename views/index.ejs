@@ -29,12 +29,13 @@
       e.preventDefault();
 
       primus.write({ action: 'wohoo' });
-      player.play();
     });
 
     primus.on('data', function received(data) {
       if (!data || !data.count) return;
+
       count.innerHTML = data.count;
+      player.play();
     });
   </script>
 </body>
