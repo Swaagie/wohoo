@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wohoo</title>
+</head>
+<style>
+  div {
+    min-height: 400px;
+  }
+</style>
+<body>
+  <div style="text-align: center; font-size: 100px; width:100%">
+    <span id="count"><%= count %></span>
+    <h1><a href="/" id="wohoo">WoHooo!</a></h1>
+  </div>
+
+  <script src="/primus/primus.js"></script>
+  <script type="text/javascript">
+    var primus = Primus.connect('/')
+      , link = document.getElementById('wohoo')
+      , count = document.getElementById('count');
+
+    link.addEventListener('click', function select(e) {
+      e.preventDefault();
+
+      primus.write({ action: 'wohoo' });
+    });
+
+    primus.on('data', function received(data) {
+      if (!data || !data.count) return;
+      count.innerHTML = data.count;
+    });
+  </script>
+</body>
+</html>
