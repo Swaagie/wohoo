@@ -1,7 +1,7 @@
-board
+Woohoo!
 =====
 
-Soundboard app for LAN gaming
+Woohoo hack
 
 ## Installation
 
