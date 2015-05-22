@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Wohoo</title>
+  <title>Woohoo</title>
 </head>
 <style>
   div {
@@ -10,21 +10,26 @@
   }
 </style>
 <body>
-  <div style="text-align: center; font-size: 100px; width:100%">
+  <div style="text-align: center; font-size: 80px; width:100%">
     <span id="count"><%= count %></span>
-    <h1><a href="/" id="wohoo">WoHooo!</a></h1>
+    <h1><a href="/" id="wohoo">WooHooo!</a></h1>
+    woohoo.nodejitsu.com
   </div>
+
+  <audio id="player" src="/woohoo.wav"></audio>
 
   <script src="/primus/primus.js"></script>
   <script type="text/javascript">
     var primus = Primus.connect('/')
       , link = document.getElementById('wohoo')
-      , count = document.getElementById('count');
+      , count = document.getElementById('count')
+      , player = document.getElementById('player');
 
     link.addEventListener('click', function select(e) {
       e.preventDefault();
 
       primus.write({ action: 'wohoo' });
+      player.play();
     });
 
     primus.on('data', function received(data) {
