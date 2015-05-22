@@ -1,7 +1,7 @@
 Woohoo!
 =====
 
-Woohoo hack
+Woohoo hack, do NOT use in production ;) there be demons!
 
 ## Installation
 
