@@ -30,7 +30,9 @@ primus.on('connection', function connected(spark) {
   spark.on('data', function received(data) {
     console.log('Received data from %s, wohoos %s', spark.id, ++wohoos);
 
-    primus.write({ count: wohoos });
+    primus.write({
+      count: wohoos
+    });
   });
 });
 
