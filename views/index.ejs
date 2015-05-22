@@ -7,14 +7,37 @@
 <style>
   div {
     min-height: 400px;
+    text-align: center;
+    font-size: 80px;
+    width:100%
   }
+
+  #count {
+    font-size: 80px
+}
+
+#wohoo {
+  box-shadow: rgb(62, 115, 39) 0px 10px 14px -7px;
+  border-radius: 4px;
+  border: 1px solid rgb(75, 143, 41);
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: Arial;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 6px 12px;
+  text-decoration: none;
+  text-shadow: rgb(91, 138, 60) 0px 1px 0px;
+  background: linear-gradient(rgb(119, 181, 90) 5%, rgb(114, 179, 82) 100%) rgb(119, 181, 90);
+}
 </style>
 <body>
   <a href="https://github.com/swaagie/woohoo/">
     <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
   </a>
 
-  <div style="text-align: center; font-size: 80px; width:100%">
+  <div>
     <span id="count"><%= count %></span>
     <h1><a href="/" id="wohoo">WooHooo!</a></h1>
 
