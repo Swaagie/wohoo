@@ -1,6 +1,8 @@
 Woohoo!
 =====
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Swaagie/woohoo.svg)](https://greenkeeper.io/)
+
 Woohoo hack, do NOT use in production ;) there be demons!
 
 ## Installation
